@@ -4,7 +4,7 @@
 
 <html lang="en">
   <head>
-    <title>YouTube 2: Electric Boogaloo</title>
+    <title>Sealio Video Player</title>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -16,7 +16,7 @@
         </div>
         <div class="header-center">
           <div class="search">
-            <h1>YouTube 2: Electric Boogaloo</h1>
+            <h1>Sealio</h1>
           </div>
         </div>
       </header>
@@ -40,7 +40,9 @@
                 <img src="assets/images/blake.png" alt="Video Thumbnail" />
               </div>
               <div class="videoInfo">
-                <h4 class="videoTitle">Doctors Hate Him! 5 Tips...</h4>
+                <h4 class="videoTitle">
+                  Doctors Hate Him! 5 Tips & Tricks to...
+                </h4>
                 <p class="channelName">Top 5 Online</p>
               </div>
             </div>
@@ -80,7 +82,7 @@
                 <img src="assets/images/fifster!!!.jpg" alt="Video Thumbnail" />
               </div>
               <div class="videoInfo">
-                <h4 class="videoTitle">tesco chicken curry review</h4>
+                <h4 class="videoTitle">apple review #20: green apole</h4>
                 <p class="channelName">fifi_foodreview</p>
               </div>
             </div>
@@ -120,7 +122,7 @@
                 <img src="assets/images/PICT0016.jpg" alt="Video Thumbnail" />
               </div>
               <div class="videoInfo">
-                <h4 class="videoTitle">Update</h4>
+                <h4 class="videoTitle">I'm Living La Vida Loca</h4>
                 <p class="channelName">BlakeyBlejkerson</p>
               </div>
             </div>
@@ -131,17 +133,24 @@
               </div>
               <div class="videoInfo">
                 <h4 class="videoTitle">I'm So Stylish</h4>
-                <p class="channelName">BlakeyBlejkerson Extra</p>
+                <p class="channelName">BlakeyBlejkerson</p>
               </div>
             </div>
           </div>
+          <!-- end of video grid -->
         </section>
       </div>
+      <!-- end of main content container -->
     </div>
+    <!-- end of app container -->
+
     <div id="playerModal" class="playerModal">
       <!-- the video player modal that appears when a video is clicked -->
       <video id="playerVideo" controls></video>
       <button id="closePlayer">✕</button>
+      <!-- one thing i want to add here is an overlay behind this modal that dims (not completely black out!) the background
+            so that it looks more focused on the video even when not in fullscreen. a button to toggle
+            this would also be nice - a moon icon or something. -->
     </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 function hideBar() {
   document.getElementById("sideBar").classList.toggle("hidden");
-} //toggles the sidebar visibility on and off on button click
+} //toggles the sidebar visibility on and off on button click (the little hamburger menu button at top left)
 
 const grid = document.querySelector(".videoGrid");
 const videos = Array.from(grid.children);

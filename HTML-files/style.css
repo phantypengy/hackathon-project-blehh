@@ -4,6 +4,12 @@
   src: url("assets/fonts/sf-pro.otf");
 }
 
+/* i made the design kinda reflect YouTube's dark mode, with main colour being dark grey (rgb(12, 12, 12))
+and hover colour being a lighter gray (rgb(40, 40, 40)). another thing is for most elements the border-radius should be 10px,
+unless the element is too small, in which case do what looks best
+for transition effects, use ease and make the time to transition kinda slow but not TOO slow. 0.3s - 0.5s is good.
+consistency with style is important!!! */
+
 @media (max-width: 768px) {
   /* hides sidebar on small screens */
   .sidebar {
