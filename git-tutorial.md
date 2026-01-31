@@ -26,7 +26,7 @@ it by pressing the keybind Ctrl + `
 
 ## Cloning + initialising
 
-Downloading a repo grom GitHub is known as **cloning**, it'll download the repo directly to the system. Yay!
+Downloading a repo from GitHub is known as **cloning**, it'll download the repo directly to the system. Yay!
 
 To do this, open your system terminal and type:
 
