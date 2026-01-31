@@ -133,7 +133,7 @@ git add style.css
 git commit -m "Fixed div alignment colour"
 ```
 
-Once you've run commit on every file you want to add to the repo, you can use the 'push' command to upload your changes
+Once you've committed every file you want to add to the repo, you can use the 'push' command to upload your changes
 to GitHub.
 
 ```
