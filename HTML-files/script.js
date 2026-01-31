@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
-  } //randomizes the order of the array!!
+  } //randomizes the order of the array!! this is something called the Fisher-Yates shuffle algorithm, uhhhmmmmm yeah
 
   shuffle(videos); //calls the shuffle function on the videos array
   videos.forEach((video) => grid.appendChild(video));

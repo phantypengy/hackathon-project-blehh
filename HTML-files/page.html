@@ -147,11 +147,11 @@
 
     <div id="playerModal" class="playerModal">
       <!-- the video player modal that appears when a video is clicked -->
-      <video id="playerVideo" controls></video>
-      <button id="closePlayer">✕</button>
-      <!-- one thing i want to add here is an overlay behind this modal that dims (not completely black out!) the background
-            so that it looks more focused on the video even when not in fullscreen. a button to toggle
-            this would also be nice - a moon icon or something. -->
+      <div class="modalBackground">
+        <!-- dims the background -->
+        <video id="playerVideo" controls></video>
+        <button id="closePlayer">✕</button>
+      </div>
     </div>
   </body>
 </html>
