@@ -39,7 +39,7 @@ on the left!
 
 After you've cloned the repo, once you open VSCode it should detect the repo and prompt you to add it - at least it did for me.
 If it doesn't, manually add the folder by clicking File > Open Folder in the top left. VSCode should automatically detect
-that this folder is a git repo.
+that this folder is a git repo. (The name of the folder will be the name of the repo you cloned)
 
 Now that you've set this all up, you should be ready to go!
 
@@ -177,4 +177,4 @@ git push
 # and that's it!
 ```
 
-Sorry if this guide is confusing, I'm not the *greatest* at things like this........
+Sorry if this guide is confusing, I'm not the _greatest_ at things like this........
