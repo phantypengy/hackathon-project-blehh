@@ -119,6 +119,7 @@ Once you've run 'git add', you will need to add a commit message. This is done l
 git commit -m "Example message"
 ```
 
+Make sure your messages are short but descriptive.
 If you used 'git add .', the message will be attached to every file. If you want separate message for each file,
 you'll have to add the files individually.
 
@@ -142,39 +143,133 @@ git push
 
 That should upload your changes to the GitHub repo, and let the others download your changes.
 
+## Branches
+
+Branches are a very useful tool for when working in a team. Creating a branch allows you to make and push changes to the repo
+without affecting the main release branch. This is _especially_ useful when working in a team, as it allows for multiple people
+to work on something without conflicting.
+
+To create a branch, you simply use these commands:
+
+```
+git branch <branch-name>
+# this will create a branch - be sure to replace <branch-name> with whatever you want to name your branch
+
+git switch <branch-name>
+# this will switch to the branch - so your pushes won't be put on main, they'll be put on the branch
+```
+
+When you create a branch for the first time and try to push a change, it'll show you an error talking about
+no upstream - to fix this you can just use this command:
+
+```
+git config --global push.autoSetupRemote true
+```
+
+This will make sure all future branches don't return the same error.
+
+Once you've used 'git checkout' to swap to the branch you want to work in, you can use add, commit and push as normal.
+
+On the GitHub website, you can view different branches via a drop-down menu right under the name of the repo - by default
+it'll be set to main. Choosing a different branch lets you view the modified code and - more importantly - create a pull request.
+
+### Pull Requests
+
+A pull request is a request to merge the branch and main. Once a pull request is made, it'll appear in the pull requests tab
+on GitHub.
+
+On this page, GitHub will check if merging is possible, show all changes / deletions made, and allow all collaborators to comment,
+request changes and approve changes. Once decided, you can either merge the pull request - which combines it with main - or close the
+request, which keeps any changes in the branch and leaves main untouched.
+
+This, as I'm sure you can tell, is _EXTREMELY_ useful in teams.
+
+### Useful branch commands
+
+```
+git branch -a
+# lists all branches
+
+git checkout -b <branch-name>
+# creates a new branch and switches to it immediately
+
+git branch -m <new-name>
+# changes the name of an existing branch
+```
+
+## Using commits as 'save points'
+
+You can always revert back to a previous commit.
+
+To do so, you'll have to find the hash of the commit:
+
+```
+git log
+```
+
+This will show previous commits, along with:
+
+- The hash (will appear as a long string of letters and numbers after the word commit)
+- The author
+- The date
+- The message
+
+Once you have the commit hash copied, you can exit the log with Ctrl + Z.
+
+```
+git revert <commit-hash> -m "commit message"
+```
+
+This will create a new commit that undoes the changes you made.
+
+**NOTE:** You do _not_ need to push in order to use commits as save points - just add and commit and it'll work.
+
+For example:
+When doing multiple tasks and you've finished one, before moving on add and commit your changes but _don't push them_.
+Now, if needed, you can revert to that commit.
+
 ## Order of operations
 
 This is just a step-by-step of what you should do when logging on for the first time each day - before making any changes.
 
 In VSCode, open the terminal with Ctrl + `
 
-Run these commands:
+Follow this order of operations:
 
 ```
+
 cd hackathon-project-thephoques
+
 # only necessary if you're not already in the directory
 
 git pull --rebase
-# will download any changes other team members pushed to the repo
-# if there are no changes, this will do nothing
 
+# will download any changes other team members pushed to the repo
+
+# if there are no changes, this will do nothing
 
 # once you've made all your changes and you want to commit:
 
 git status
+
 # shows you all untracked files
 
 git add .
+
 # will add all untracked files to be committed
 
 git commit -m "Enter message here"
+
 # commits + adds a message - remember, if you did 'git add .' your commit message
+
 # will be the same for all files
 
 git push
+
 # uploads changes to GitHub
 
 # and that's it!
+
 ```
 
 Sorry if this guide is confusing, I'm not the _greatest_ at things like this........
