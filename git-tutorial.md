@@ -154,7 +154,7 @@ To create a branch, you simply use these commands:
 git branch branch-name
 # this will create a branch - be sure to replace 'branch-name' with whatever you want to name your branch
 
-git checkout branch-name
+git switch branch-name
 # this will switch to the branch - so your pushes won't be put on main, they'll be put on the branch
 ```
 
@@ -178,7 +178,21 @@ A pull request is a request to merge the branch and main. Once a pull request is
 on GitHub.
 
 On this page, GitHub will check if merging is possible, show all changes / deletions made, and allow all collaborators to comment,
-request changes and approve changes. Once decided, you can
+request changes and approve changes. Once decided, you can either merge the pull request - which combines it with main - or close the
+request, which keeps any changes in the branch and leaves main untouched.
+
+This, as I'm sure you can tell, is _EXTREMELY_ useful in teams.
+
+### Other commands
+
+```
+git branch -a
+# lists all branches
+
+git checkout -b branch-name
+# creates a new branch and switches to it immediately
+
+
 
 ## Order of operations
 
@@ -189,30 +203,40 @@ In VSCode, open the terminal with Ctrl + `
 Run these commands:
 
 ```
+
 cd hackathon-project-thephoques
+
 # only necessary if you're not already in the directory
 
 git pull --rebase
-# will download any changes other team members pushed to the repo
-# if there are no changes, this will do nothing
 
+# will download any changes other team members pushed to the repo
+
+# if there are no changes, this will do nothing
 
 # once you've made all your changes and you want to commit:
 
 git status
+
 # shows you all untracked files
 
 git add .
+
 # will add all untracked files to be committed
 
 git commit -m "Enter message here"
+
 # commits + adds a message - remember, if you did 'git add .' your commit message
+
 # will be the same for all files
 
 git push
+
 # uploads changes to GitHub
 
 # and that's it!
+
 ```
 
 Sorry if this guide is confusing, I'm not the _greatest_ at things like this........
+```
